@@ -39,6 +39,6 @@ public class WordsDataSource {
     }
 
     public void clearDatabase(){
-        database.execSQL("delete * from "+WordsLibOpenHelper.TABLE_NAME);
+        database.execSQL("delete from "+WordsLibOpenHelper.TABLE_NAME);
     }
 }

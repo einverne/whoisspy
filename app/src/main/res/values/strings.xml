@@ -4,5 +4,7 @@
     <string name="app_name">WhoIsSpy</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="dialog_player_name_hint">Input player name</string>
+    <string name="title_activity_game">GameActivity</string>
 
 </resources>

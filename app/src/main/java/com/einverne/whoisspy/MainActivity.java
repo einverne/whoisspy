@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
@@ -172,6 +173,13 @@ public class MainActivity extends ActionBarActivity {
                 String whitenum = spinner_whiteborad_num.getSelectedItem().toString();
                 int n_whitenum = Integer.parseInt(whitenum);
                 int all_plater = gridView.getChildCount();
+
+                if (all_plater < n_spynum + n_whitenum){
+                    Toast.makeText(this,"卧底和白板不能超过玩家人数",Toast.LENGTH_SHORT).show();
+                }else {
+                    Intent intent = new Intent(this,GameActivity.class);
+                    startActivity(intent);
+                }
 
                 return true;
             case R.id.update_database:
